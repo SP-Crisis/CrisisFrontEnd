@@ -1,0 +1,13 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: side; }
+.item3 { grid-area: main; }
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'side side header header'
+    'side side main main'
+    'side side main main';
+    grid-gap: 2px;
+    padding: 0px;
+}

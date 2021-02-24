@@ -6,15 +6,25 @@ import { Navigation, Home, Sidebar, Policies } from "./components";
 function App() {
   return (
     <div className="App">
-        <Router>
+      <div class ="grid-container">
+      <Router>
+          <div class="item1">
             <Navigation />
-            <Sidebar />
-
-        <Switch>
-            <Route path="/" exact component={() => <Home />} />
-            <Route path="/policies" exact component={() => <Policies />} />
-        </Switch>
+          </div>
+          <div class="item2">
+          <Sidebar />
+          </div>
+          <div class="item3">
+           <Switch>
+              <Route path="/" exact component={() => <Home />} />
+              <Route path="/policies" exact component={() => <Policies />} />
+            </Switch>
+          </div>
         </Router>
+
+      </div>
+
+      
     </div>
   );
 }
