@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navigation, Home, Sidebar, Policies } from "./components";
-import "./index.scss";
+
 
 function App() {
   return (
