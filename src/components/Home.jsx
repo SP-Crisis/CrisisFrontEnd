@@ -11,7 +11,7 @@ function Home() {
           </div>
           <div class="right" >
               <Link to="/forum">
-                <img src={Forum} width="500px" height="500px"></img>
+                <img src={Forum} width="500px" height="400px"></img>
               </Link>
           </div>
       </div>
