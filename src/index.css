@@ -5,9 +5,37 @@
 .grid-container{
     display: grid;
     grid-template-areas:
-    'side side header header'
-    'side side main main'
-    'side side main main';
+    'side header heaer'
+    'side main main';
     grid-gap: 2px;
     padding: 0px;
 }
+
+.container{
+    padding: 0px;
+    display: flex;
+}
+
+.left, .right {
+    float: left;
+    width: 33%;
+    padding: 0px;
+ }
+ 
+ .left{
+     padding-right: 260px;
+     padding-bottom: 130px;
+     padding-left: 0px;
+     position:relative;
+ }
+
+ .right{
+     padding-left: 300px;
+     padding-bottom: 300px;
+     padding-right: 0px;
+     position:relative;
+ }
+
+ .container:after {
+    clear: both;
+ }

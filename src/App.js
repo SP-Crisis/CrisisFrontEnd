@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Sidebar, Policies } from "./components";
-
+import { Navigation, Home, Sidebar, Policies, Forum } from "./components";
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
            <Switch>
               <Route path="/" exact component={() => <Home />} />
               <Route path="/policies" exact component={() => <Policies />} />
+              <Route path="/forum" exact component={() => <Forum />} />
             </Switch>
           </div>
         </Router>

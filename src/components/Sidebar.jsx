@@ -30,7 +30,7 @@ function Sidebar(props){
                                     }`}
                                 >
                                 <Link class="nav-link" to="/policies">
-                                    Polcies
+                                    Policies
                                 </Link>
                         </li>
                         <li class="nav-item">
@@ -38,10 +38,13 @@ function Sidebar(props){
                                 <i class="fas fa-fw fa-chart-area"></i>
                                 <span>Operations</span></a>
                         </li>
-                         <li class="nav-item">
-                             <a class="nav-link" href="charts.html">
-                                <i class="fas fa-fw fa-chart-area"></i>
-                                <span>Forum</span></a>
+                         <li class={`nav-item  ${
+                                    props.location.pathname === "/forum" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/forum">
+                                    Forum
+                                </Link>
                         </li>
                         <li class="nav-item">
                              <a class="nav-link" href="charts.html">
