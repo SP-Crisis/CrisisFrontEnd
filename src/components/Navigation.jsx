@@ -6,7 +6,7 @@ function Navigation(props){
         <div id="wrapper">
             <div id="content-wrapper" class="">
                 <div id="content">
-                <div class="row align-items-center my-5">
+                <div class="row align-items-center ">
                     <nav class="navbar navbar-light bg-white topbar">
 
                          <form class="d-none d-sm-inline-block form-inline navbar-search">
@@ -19,7 +19,7 @@ function Navigation(props){
                                     </button>
                                 </div>
                             </div>
-                        </form>                                 
+                        </form>                               
                      </nav>
                     </div>
                 </div>

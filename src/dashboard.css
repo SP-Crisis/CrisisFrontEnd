@@ -571,7 +571,6 @@
   
   .row {
     display: flex;
-    flex-wrap: wrap;
     margin-right: -0.75rem;
     margin-left: -0.75rem;
   }
@@ -594,14 +593,12 @@
   .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
   .col-xl-auto {
     position: relative;
-    width: 100%;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
   }
   
   .col {
     flex-basis: 0;
-    flex-grow: 1;
     max-width: 100%;
   }
   
@@ -1185,20 +1182,12 @@
       max-width: 25%;
     }
     .col-lg-4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
     }
     .col-lg-5 {
-      flex: 0 0 41.66667%;
-      max-width: 41.66667%;
     }
     .col-lg-6 {
       flex: 0 0 50%;
       max-width: 50%;
-    }
-    .col-lg-7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%;
     }
     .col-lg-8 {
       flex: 0 0 66.66667%;
@@ -1307,23 +1296,18 @@
     .col-xl {
       flex-basis: 0;
       flex-grow: 1;
-      max-width: 100%;
     }
     .row-cols-xl-1 > * {
       flex: 0 0 100%;
-      max-width: 100%;
     }
     .row-cols-xl-2 > * {
       flex: 0 0 50%;
-      max-width: 50%;
     }
     .row-cols-xl-3 > * {
       flex: 0 0 33.33333%;
-      max-width: 33.33333%;
     }
     .row-cols-xl-4 > * {
       flex: 0 0 25%;
-      max-width: 25%;
     }
     .row-cols-xl-5 > * {
       flex: 0 0 20%;
@@ -1351,8 +1335,6 @@
       max-width: 25%;
     }
     .col-xl-4 {
-      flex: 0 0 33.33333%;
-      max-width: 33.33333%;
     }
     .col-xl-5 {
       flex: 0 0 41.66667%;
@@ -1361,14 +1343,6 @@
     .col-xl-6 {
       flex: 0 0 50%;
       max-width: 50%;
-    }
-    .col-xl-7 {
-      flex: 0 0 58.33333%;
-      max-width: 58.33333%;
-    }
-    .col-xl-8 {
-      flex: 0 0 66.66667%;
-      max-width: 66.66667%;
     }
     .col-xl-9 {
       flex: 0 0 75%;
@@ -4403,13 +4377,9 @@
   }
   
   .card {
-    position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
     background-color: #fff;
-    background-clip: border-box;
     border: 1px solid #e3e6f0;
     border-radius: 0.35rem;
   }
@@ -4419,32 +4389,9 @@
     margin-left: 0;
   }
   
-  .card > .list-group {
-    border-top: inherit;
-    border-bottom: inherit;
-  }
-  
-  .card > .list-group:first-child {
-    border-top-width: 0;
-    border-top-left-radius: calc(0.35rem - 1px);
-    border-top-right-radius: calc(0.35rem - 1px);
-  }
-  
-  .card > .list-group:last-child {
-    border-bottom-width: 0;
-    border-bottom-right-radius: calc(0.35rem - 1px);
-    border-bottom-left-radius: calc(0.35rem - 1px);
-  }
-  
-  .card > .card-header + .list-group,
-  .card > .list-group + .card-footer {
-    border-top: 0;
-  }
   
   .card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.25rem;
+    padding: 0px;
   }
   
   .card-title {
@@ -4515,7 +4462,6 @@
   .card-img-top,
   .card-img-bottom {
     flex-shrink: 0;
-    width: 100%;
   }
   
   .card-img,
@@ -4534,82 +4480,14 @@
     margin-bottom: 0.75rem;
   }
   
-  @media (min-width: 576px) {
-    .card-deck {
-      display: flex;
-      flex-flow: row wrap;
-      margin-right: -0.75rem;
-      margin-left: -0.75rem;
-    }
-    .card-deck .card {
-      flex: 1 0 0%;
-      margin-right: 0.75rem;
-      margin-bottom: 0;
-      margin-left: 0.75rem;
-    }
-  }
-  
   .card-group > .card {
     margin-bottom: 0.75rem;
-  }
-  
-  @media (min-width: 576px) {
-    .card-group {
-      display: flex;
-      flex-flow: row wrap;
-    }
-    .card-group > .card {
-      flex: 1 0 0%;
-      margin-bottom: 0;
-    }
-    .card-group > .card + .card {
-      margin-left: 0;
-      border-left: 0;
-    }
-    .card-group > .card:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    .card-group > .card:not(:last-child) .card-img-top,
-    .card-group > .card:not(:last-child) .card-header {
-      border-top-right-radius: 0;
-    }
-    .card-group > .card:not(:last-child) .card-img-bottom,
-    .card-group > .card:not(:last-child) .card-footer {
-      border-bottom-right-radius: 0;
-    }
-    .card-group > .card:not(:first-child) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    .card-group > .card:not(:first-child) .card-img-top,
-    .card-group > .card:not(:first-child) .card-header {
-      border-top-left-radius: 0;
-    }
-    .card-group > .card:not(:first-child) .card-img-bottom,
-    .card-group > .card:not(:first-child) .card-footer {
-      border-bottom-left-radius: 0;
-    }
   }
   
   .card-columns .card {
     margin-bottom: 0.75rem;
   }
   
-  @media (min-width: 576px) {
-    .card-columns {
-      -moz-column-count: 3;
-      column-count: 3;
-      -moz-column-gap: 1.25rem;
-      column-gap: 1.25rem;
-      orphans: 1;
-      widows: 1;
-    }
-    .card-columns .card {
-      display: inline-block;
-      width: 100%;
-    }
-  }
   
   .accordion {
     overflow-anchor: none;
@@ -7672,7 +7550,7 @@
   
   .mb-4,
   .my-4 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 2rem !important;
   }
   
   .ml-4,
@@ -9507,11 +9385,11 @@
   }
   
   .text-primary {
-    color: #4e73df !important;
+    color: #0D4077!important;
   }
   
   a.text-primary:hover, a.text-primary:focus {
-    color: #224abe !important;
+    color: #7d7f85 !important;
   }
   
   .text-secondary {
@@ -10733,57 +10611,18 @@
   
   .chart-area {
     position: relative;
-    height: 10rem;
-    width: 100%;
   }
   
-  @media (min-width: 768px) {
-    .chart-area {
-      height: 20rem;
-    }
-  }
   
   .chart-bar {
     position: relative;
-    height: 10rem;
-    width: 100%;
   }
   
-  @media (min-width: 768px) {
-    .chart-bar {
-      height: 20rem;
-    }
-  }
   
   .chart-pie {
     position: relative;
-    height: 15rem;
-    width: 100%;
   }
   
-  @media (min-width: 768px) {
-    .chart-pie {
-      height: calc(20rem - 43px) !important;
-    }
-  }
-  
-  .bg-login-image {
-    background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .bg-register-image {
-    background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .bg-password-image {
-    background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
-    background-position: center;
-    background-size: cover;
-  }
   
   form.user .custom-checkbox.small label {
     line-height: 1.5rem;
