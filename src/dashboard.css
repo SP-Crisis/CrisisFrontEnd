@@ -4391,7 +4391,8 @@
   
   
   .card-body {
-    padding: 0px;
+    padding: 1px;
+    display: flex;
   }
   
   .card-title {
@@ -9586,12 +9587,14 @@
   }
   
   #wrapper {
-    display:auto;
+    display:flex;
+    height: 100%;
   }
   
   #wrapper #content-wrapper {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
+    overflow-y: scroll;
   }
   
   
