@@ -1,0 +1,43 @@
+.item1 { grid-area: header; }
+.item2 { grid-area: side; }
+.item3 { grid-area: main; }
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'side header heaer'
+    'side main main';
+    grid-gap: 0px;
+    padding: 0px;
+}
+
+.container{
+    padding: 0px;
+    display:flex;
+}
+
+.left, .right{
+    width: 33%;
+    color: white;
+    padding: 10px;
+    height: 500px;
+    display: grid;
+ }
+ 
+ .left{
+     padding-right: 250px;
+     padding-bottom: 130px;
+     position:static;
+ }
+
+ .right{
+     padding-left: 250px;
+     padding-bottom: 340px;
+     position:static;
+ }
+
+ .container:after {
+    clear: both;
+ }
+
+ 

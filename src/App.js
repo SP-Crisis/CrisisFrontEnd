@@ -1,20 +1,30 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Sidebar, Policies } from "./components";
-import "./index.scss";
+import { Navigation, Home, Sidebar, Policies, Forum } from "./components";
 
 function App() {
   return (
     <div className="App">
-        <Router>
+      <div class ="grid-container">
+      <Router>
+          <div class="item1">
             <Navigation />
-            <Sidebar />
-
-        <Switch>
-            <Route path="/" exact component={() => <Home />} />
-            <Route path="/policies" exact component={() => <Policies />} />
-        </Switch>
+          </div>
+          <div class="item2">
+          <Sidebar />
+          </div>
+          <div class="item3">
+           <Switch>
+              <Route path="/" exact component={() => <Home />} />
+              <Route path="/policies" exact component={() => <Policies />} />
+              <Route path="/forum" exact component={() => <Forum />} />
+            </Switch>
+          </div>
         </Router>
+
+      </div>
+
+      
     </div>
   );
 }

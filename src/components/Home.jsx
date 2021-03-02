@@ -1,24 +1,49 @@
 import React from "react";
+import Forum from "./Forum.png";
+import {Link, withRouter} from "react-router-dom";
 
 function Home() {
   return (
     <div className="home">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-           
+      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+              <a href="#" class="d-none d-sm-inline-block"><i
+                class="fas fa-download fa-sm text-white-50"></i>
+                  <Link to="/forum">
+                            <img src={Forum} width="300px" height="235px"></img>
+                    </Link>
+                </a>
+              </div>
+      <div class="row">
+      <div class="col-xl-8 col-lg-7">
+        <div class="card">
+          <div
+                class="card-header align-items-center ">
+                <h6 class="m-0 font-weight-bold text-primary">COVID Response</h6>
           </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">CSU Dashboard</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+          <div class="card-body">
+                    <iframe src="https://www.columbusstate.edu/covid/" width="700px" height="600px"></iframe>
+                
           </div>
-        </div>
       </div>
+
+      </div>
+
+      <div class="col-xl-4 col-lg-5">
+        <div class="card">
+        <div
+                class="card-header align-items-center ">
+                <h6 class="m-0 font-weight-bold text-primary">COVID Chart</h6>
+          </div>
+          <div class="card-body">
+                <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="430px" height="600px"></iframe>
+             
+          </div>
+         </div>
+      </div>
+      
+      </div>
+         
     </div>
   );
 }
