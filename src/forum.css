@@ -17,16 +17,14 @@ body{
 
 .inner-main,
 .inner-sidebar {
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
-    display: flex;
-    flex-direction: column;
+    display: contents;
 }
 .inner-sidebar {
     left: 0;
     width: 235px;
-    border-right: 1px solid #cbd5e0;
     background-color: #fff;
     z-index: 1;
 }
@@ -109,7 +107,6 @@ body{
 }
 
 .cardf {
-    position: relative;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -123,7 +120,7 @@ body{
 
 }
 
-.card-bodyf {
+.cardf-body {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1rem;
