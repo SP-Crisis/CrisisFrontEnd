@@ -1,7 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+
+import { Button, Modal } from 'react-bootstrap';
+
 
 
 function Forum() {
+    const [show, setShow] = useState(false);
+   
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+    
 
   return (
     <div className="forum"> 
@@ -17,10 +25,9 @@ function Forum() {
                 <select class="custom-select custom-select-sm w-auto mr-1">
                     <option selected="">Latest</option>
                     <option value="1">Popular</option>
-                    <option value="3">Solved</option>
-                    <option value="3">Unsolved</option>
                     <option value="3">No Replies Yet</option>
                 </select>
+
                 <span class="input-icon input-icon-sm ml-auto w-auto">
                     <input type="text" class="form-control form-control-sm bg-gray-200 border-gray-200 shadow-none mb-4 mt-4" placeholder="Search forum" />
                 </span>
@@ -28,13 +35,14 @@ function Forum() {
               </div>
               <div class="inner-sidebar">
                 <div class="inner-sidebar-header justify-content-center"> 
-                  <button class="btn btn-primary has-icon btn-block" type="button" data-toggle="modal" data-target="#threadModal"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2">
+                
+                <Button variant="primary"  onClick={handleShow} lass="btn btn-primary has-icon btn-block">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2">
                           <line x1="12" y1="5" x2="12" y2="19"></line>
                           <line x1="5" y1="12" x2="19" y2="12"></line>
                       </svg>
                     NEW DISCUSSION
-                  </button>
+                </Button>
                   
                   
               </div>
@@ -59,39 +67,38 @@ function Forum() {
               </div>
               </div>
             </div>
+            
 
-            <div class="modal" id="#threadModal" tabindex="-1" role="dialog" aria-labelledby="threadModalLabel" aria-hidden="true">
-             <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <form>
-                    <div class="modal-header d-flex align-items-center bg-primary text-white">
-                        <h6 class="modal-title mb-0" id="threadModalLabel">New Discussion</h6>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+        </div>
+    < div class="modal">
+        <Modal size="lg" show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title> New Discussion</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <form>
                         <div class="form-group">
                             <label for="threadTitle">Title</label>
                             <input type="text" class="form-control" id="threadTitle" placeholder="Enter title" autofocus="" />
                         </div>
                         <textarea class="form-control summernote" style={{display: "none"}}></textarea>
 
-                        <div class="custom-file form-control-sm mt-3" style={{width: "300px"}}>
-                            <input type="file" class="custom-file-input" id="customFile" multiple="" />
-                            <label class="custom-file-label" for="customFile">Attachment</label>
+                        <div class="input-group" style={{width: "340pxx", height: "360px"}}>
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Question?"
+                                aria-label="Question" aria-describedby="basic-addon2"></input>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary">Post</button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Post
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
-    </div>
-
-    </div>
     </div>
   );
 }

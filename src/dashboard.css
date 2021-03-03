@@ -5397,7 +5397,7 @@
   }
   
   .modal-open {
-    overflow: visible;
+    overflow: auto;
   }
   
   .modal-open .modal {
@@ -5414,6 +5414,7 @@
     height: 100%;
     overflow: hidden;
     outline: 0;
+    background: rgba(112, 112, 112, 0.767); 
   }
   
   .modal-dialog {
@@ -5490,26 +5491,28 @@
   }
   
   .modal-content {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(63, 63, 63, 0.2);
     border-radius: 0.3rem;
     outline: 0;
+    z-index: 1100 !important;
+    margin: 2px auto;
   }
   
   .modal-backdrop {
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
-    z-index: 1040;
+    z-index: 1040  !important;
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: rgba(121, 120, 120, 0.445);
   }
   
   .modal-backdrop.fade {
