@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import {Link, withRouter} from "react-router-dom";
 import { Button, Modal } from 'react-bootstrap';
 
 
@@ -81,11 +81,14 @@ function Forum() {
                             <label for="threadTitle">Title</label>
                             <input type="text" class="form-control" id="threadTitle" placeholder="Enter title" autofocus="" />
                         </div>
-                        <textarea class="form-control summernote" style={{display: "none"}}></textarea>
-
-                        <div class="input-group" style={{width: "340pxx", height: "360px"}}>
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Question?"
-                                aria-label="Question" aria-describedby="basic-addon2"></input>
+                        <div class="form-group">
+                            <label for="threadTitle">Name</label>
+                            <input type="text" class="form-control" id="threadTitle" placeholder="Enter name" autofocus="" />
+                        </div>
+                        
+                        <div class="form-group">
+                        <label for="threadTitle">Question</label>
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Question?"></input>
                         </div>
                     </form>
                 </Modal.Body>
