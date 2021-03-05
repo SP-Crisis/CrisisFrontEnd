@@ -9,6 +9,7 @@
 .item3 { 
     grid-area: main; 
     overflow: auto;
+    padding:10px;
 }
 
 .grid-container{
@@ -16,19 +17,12 @@
     grid-template-areas:
     'side header heaer'
     'side main main';
-    grid-gap: 4px;
+    grid-gap: 0px;
     padding: 0px;
     overflow: scroll;
-    position: fixed
+    position:fixed;
 }
 
 
-.container{
-    padding: 1px;
-    display:grid;
-}
- .container:after {
-    clear: both;
- }
 
  

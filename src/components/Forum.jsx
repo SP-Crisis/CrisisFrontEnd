@@ -12,7 +12,10 @@ function Forum() {
 
   return (
     <div class="container-fluid">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <div class="inner-wrapper">
+        <div class="inner-main">
+        
+        <div class="align-items-center justify-content-between mb-4">
                 <Button variant="primary"  onClick={handleShow} lass="btn btn-primary has-icon btn-block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2">
                           <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -22,7 +25,7 @@ function Forum() {
                 </Button>
          </div>
                 
-
+        <div class="inner-main-header">
         <div class="row">
             <div class="col-xl-8 col-lg-7 ">
                         <select class="custom-select custom-select-sm w-auto mr-1">
@@ -37,11 +40,13 @@ function Forum() {
                 </span>
             </div>
         </div>
+        </div>
 
+        <div class="inner-main-body">
         <div class="row">
             <div class="col-xl-6 md-4">
-                <div class="cardf mb-2">
-                    <div class="card-bodyf p-2 p-sm-3">   
+                <div class="card mb-2">
+                    <div class="card-body p-2 p-sm-3">   
                         <div class="media forum-item">
                             <a href="#" data-toggle="collapse" data-target=".forum-content"></a>
 
@@ -56,6 +61,7 @@ function Forum() {
                     </div>  
                 </div>
             </div>
+        </div>
         </div>
 
         < div class="modal">
@@ -93,6 +99,8 @@ function Forum() {
                 </Modal>
         </ div>
 
+        </div>
+        </div>
     </div>
   );
 }

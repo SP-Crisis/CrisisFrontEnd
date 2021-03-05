@@ -5,7 +5,7 @@ function Navigation(props){
     return(
         <div class="container-fluid">
 
-        <div class="row align-items-center ">
+        <div class="row">
             <nav class="navbar navbar-expand navbar-light topbar shadow">
 
                 <form class="d-sm-inline-block form-inline navbar-search">

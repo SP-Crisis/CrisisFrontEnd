@@ -5,7 +5,6 @@ body{
     background-color: #e2e8f0;    
 }
 .inner-wrapper {
-    position: relative;
     height: calc(100vh - 3.5rem);
     transition: transform 0.3s;
 }
@@ -17,20 +16,13 @@ body{
 
 .inner-main,
 .inner-sidebar {
-    position: relative;
     top: 0;
     bottom: 0;
-    display: contents;
 }
-.inner-sidebar {
-    left: 0;
-    width: 235px;
-    background-color: #fff;
-    z-index: 1;
-}
+
 .inner-main {
     right: 0;
-    left: 200px;
+    align-items: center;
 }
 .inner-main-footer,
 .inner-main-header,
@@ -38,16 +30,13 @@ body{
 .inner-sidebar-header {
     height: 3.5rem;
     border-bottom: 1px solid #cbd5e0;
-    display: flex;
     align-items: center;
-    padding: 0 1rem;
     flex-shrink: 0;
 }
 .inner-main-body,
 .inner-sidebar-body {
     padding: 1rem;
     overflow-y: auto;
-    position: relative;
     flex: 1 1 auto;
 }
 .inner-main-body .sticky-top,
@@ -102,11 +91,11 @@ body{
 .nav-link {
     color: #4a5568;
 }
-.cardf {
+.card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
-.cardf {
+.card{
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -116,11 +105,10 @@ body{
     border: 0 solid rgba(0,0,0,.125);
     border-radius: .25rem;
     top:20px;
-    left:180px;
 
 }
 
-.cardf-body {
+.card-body {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1rem;

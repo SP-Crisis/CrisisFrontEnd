@@ -3,10 +3,10 @@ import {Link, withRouter} from "react-router-dom";
 
 function Sidebar(props){
     return(
-        <div id="wrapper">
-             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <div class="container-fluid">
+             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark">
 
-                        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                        <a class="sidebar-brand d-flex align-items-center " href="index.html">
                             
                             <div class="sidebar-brand-text mx-3"><sub>Crisis Managment System</sub></div>
                         </a>

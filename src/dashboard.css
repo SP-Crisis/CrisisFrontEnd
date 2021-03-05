@@ -100,6 +100,7 @@
   dl {
     margin-top: 0;
     margin-bottom: 1rem;
+    padding-inline-start: 0px;
   }
   
   ol ol,
@@ -1312,8 +1313,6 @@
       max-width: 41.66667%;
     }
     .col-xl-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
     }
     .col-xl-9 {
       flex: 0 0 75%;
@@ -4014,7 +4013,6 @@
     flex-wrap: wrap;
     align-items: center;
     padding: .5rem 1rem;
-    width:100%;
   }
   
   .navbar .container,
@@ -4040,9 +4038,10 @@
   .navbar-nav {
     display: flex;
     flex-direction: column;
-    padding-left: 0;
+    padding-left: 0px;
     margin-bottom: 0;
     list-style: none;
+    padding-inline-start: 0px;
   }
   
   .navbar-nav .nav-link {
@@ -9563,7 +9562,7 @@
   .container-md,
   .container-lg,
   .container-xl {
-    padding-right: 1.5rem;
+    padding-right: 0rem;
   }
   
   .scroll-to-top {
