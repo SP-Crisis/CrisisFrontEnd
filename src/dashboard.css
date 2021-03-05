@@ -547,7 +547,8 @@
   
   .row {
     display: flex;
-    margin-right: -0.75rem;
+    flex-wrap: wrap;
+    margin-right: 2rem;
     margin-left: -0.75rem;
   }
   
@@ -4012,7 +4013,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1px;
+    padding: .5rem 1rem;
+    width:100%;
   }
   
   .navbar .container,
@@ -4029,7 +4031,6 @@
     padding-bottom: 0.3125rem;
     margin-right: 1rem;
     font-size: 1.25rem;
-    white-space: nowrap;
   }
   
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4244,6 +4245,7 @@
   
   .navbar-light .navbar-brand {
     color: rgba(255, 254, 254, 0.9);
+    width: 100%;
   }
   
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -7325,6 +7327,7 @@
   
   .shadow {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    
   }
   
   .shadow-lg {
@@ -9560,7 +9563,6 @@
   .container-md,
   .container-lg,
   .container-xl {
-    padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
   
@@ -9913,6 +9915,7 @@
   
   .topbar {
     height: 4.375rem;
+    width: 100%;
   }
   
   .topbar #sidebarToggleTop {

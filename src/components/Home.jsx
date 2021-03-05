@@ -4,16 +4,24 @@ import {Link, withRouter} from "react-router-dom";
 
 function Home() {
   return (
-    <div className="home">
-      <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <div class="container-fluid">
+
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <a href="#" class="d-none d-sm-inline-block"><i
-                class="fas fa-download fa-sm text-white-50"></i>
-                  <Link to="/forum">
-                            <img src={Forum} width="300px" height="235px"></img>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <Link to="/forum">
+                      <img src={Forum} width="300px" height="235px"></img>
                     </Link>
-                </a>
+                </div>
               </div>
+          </div>
+        </div>
+
       <div class="row">
       <div class="col-xl-8 col-lg-7">
         <div class="card">
@@ -43,8 +51,8 @@ function Home() {
       </div>
       
       </div>
+      </div>
          
-    </div>
   );
 }
 
