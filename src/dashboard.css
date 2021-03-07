@@ -576,7 +576,7 @@
   }
   
   .col {
-    flex-basis: 0;
+    flex-basis: 100px;
     max-width: 100%;
   }
   
@@ -2288,22 +2288,22 @@
   
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4;
+    background-color: #0D4077;
+    border-color: #0D4077;
     box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
   }
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df;
+    background-color: #0D4077;
+    border-color: #0D4077;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #2653d4;
-    border-color: #244ec9;
+    background-color: #0D4077;
+    border-color: #0D4077;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -4351,7 +4351,7 @@
   
   
   .card-body {
-    padding: 1px;
+    padding: 2px;
     display: flex;
   }
   
@@ -7441,7 +7441,7 @@
   
   .mb-1,
   .my-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: .9rem !important;
   }
   
   .ml-1,
@@ -7460,7 +7460,7 @@
   
   .mr-2,
   .mx-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 1rem !important;
   }
   
   
@@ -9352,7 +9352,7 @@
   }
   
   .text-secondary {
-    color: #858796 !important;
+    color: #B5233A !important;
   }
   
   a.text-secondary:hover, a.text-secondary:focus {
@@ -9733,7 +9733,7 @@
   }
   
   .text-xs {
-    font-size: .7rem;
+    font-size: .9rem;
   }
   
   .text-lg {
@@ -9786,19 +9786,19 @@
   }
   
   .border-left-primary {
-    border-left: 0.25rem solid #4e73df !important;
+    border-left: 0.25rem solid #0D4077 !important;
   }
   
   .border-bottom-primary {
-    border-bottom: 0.25rem solid #4e73df !important;
+    border-bottom: 0.25rem solid #0D4077 !important;
   }
   
   .border-left-secondary {
-    border-left: 0.25rem solid #858796 !important;
+    border-left: 0.25rem solid #B5233A !important;
   }
   
   .border-bottom-secondary {
-    border-bottom: 0.25rem solid #858796 !important;
+    border-bottom: 0.25rem solid #B5233A !important;
   }
   
   .border-left-success {

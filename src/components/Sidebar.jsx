@@ -3,6 +3,7 @@ import {Link, withRouter} from "react-router-dom";
 
 function Sidebar(props){
     return(
+        <div id="wrapper">
         <div class="container-fluid">
              <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark">
 
@@ -53,6 +54,7 @@ function Sidebar(props){
                         </li>
 
                     </ul>
+        </div>
         </div>
 
     );

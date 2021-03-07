@@ -11,6 +11,7 @@ function Forum() {
     
 
   return (
+    <div id="wrapper">
     <div class="container-fluid">
         <div class="inner-wrapper">
         <div class="inner-main">
@@ -52,7 +53,7 @@ function Forum() {
 
                             <div class="media-body">
                                 <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                    <p class="text-secondary">
+                                    <p class="text-body">
                                         lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
                                     </p>
                                 <p class="text-muted"><a href="javascript:void(0)">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
@@ -101,6 +102,7 @@ function Forum() {
 
         </div>
         </div>
+    </div>
     </div>
   );
 }

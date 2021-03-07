@@ -1,5 +1,6 @@
 .item1 { 
     grid-area: header; 
+    overflow: auto;
 }
 
 .item2 { 
@@ -8,7 +9,6 @@
 
 .item3 { 
     grid-area: main; 
-    overflow: auto;
     padding:10px;
 }
 
@@ -21,6 +21,8 @@
     padding: 0px;
     overflow: scroll;
     position:fixed;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 

@@ -3,9 +3,8 @@ import {Link, withRouter} from "react-router-dom";
 
 function Navigation(props){
     return(
+        <div id="wrapper">
         <div class="container-fluid">
-
-        <div class="row">
             <nav class="navbar navbar-expand navbar-light topbar shadow">
 
                 <form class="d-sm-inline-block form-inline navbar-search">
@@ -20,7 +19,7 @@ function Navigation(props){
                     </div>
                 </form>                            
             </nav>
-        </div>
+    </div>
     </div>
     );
 }
