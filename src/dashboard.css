@@ -1312,8 +1312,6 @@
       flex: 0 0 41.66667%;
       max-width: 41.66667%;
     }
-    .col-xl-6 {
-    }
     .col-xl-9 {
       flex: 0 0 75%;
       max-width: 75%;
@@ -4008,10 +4006,10 @@
   }
   
   .navbar {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position:relative;
     padding: .5rem 1rem;
   }
   
