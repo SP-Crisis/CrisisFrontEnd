@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Button, Modal } from 'react-bootstrap';
 
 
 
 function Forum() {
     const [show, setShow] = useState(false);
-   
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    
+    //useEffect 
     
 
   return (
