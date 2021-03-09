@@ -61,7 +61,7 @@ function Policies() {
                 <h6 class="m-0 font-weight-bold text-primary">Reporting and Tracking</h6>
           </div>
           <div class="card-body">
-                    <iframe src="https://www.columbusstate.edu/covid/self-report-tracking.php" width="740px" height="640px"></iframe>
+                    <iframe src="https://www.columbusstate.edu/covid/self-report-tracking.php" width="740px" height="810px"></iframe>
                 
           </div>
         </div>
@@ -73,11 +73,30 @@ function Policies() {
                 class="card-header align-items-center ">
                 <h6 class="m-0 font-weight-bold text-primary">State</h6>
           </div>
-          <div class="card-body">
-                <iframe src="https://ourworldindata.org/grapher/total-cases-covid-19?tab=map" width="440px" height="640px"></iframe>
-             
+          <div class="card-body text-xs font-weight-bold">
+            <p> 
+              <li>Stay home if you’re at higher risk</li>
+              <li>Wear a cloth face mask in public</li>
+              <li>Wash your hands frequently</li>
+              <li>Move at least 6 feet away from others</li>
+              <li>Clean and disinfect surfaces daily</li>
+              <li>Get your COVID-19 vaccine</li>
+            </p>
           </div>
          </div>
+
+         <div class="col-xl-4 col-lg-5">
+        <div class="card">
+        <div
+                class="card-header align-items-center ">
+                <h6 class="m-0 font-weight-bold text-primary">Vaccine Info</h6>
+          </div>
+          <div class="card-body">
+              <iframe src="https://experience.arcgis.com/experience/3d8eea39f5c1443db1743a4cb8948a9c/" width="450px" height="620px"></iframe>
+          </div>
+         </div>
+      </div>
+
       </div>
 
       </div>
