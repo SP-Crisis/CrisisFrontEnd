@@ -8,7 +8,20 @@ function Forum() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
+
+    const [items, setItems] = useState([]);
     //useEffect 
+    useEffect(() => {
+        fetch("https://crisis-octogon-3123.herokuapp.com/api/questions",{
+            method:'GET'
+        })
+          .then(res => res.json())
+          .then(
+            (result) => {
+              setItems(result);
+            },
+          )
+      }, [])
     
 
   return (
@@ -47,24 +60,25 @@ function Forum() {
         <div class="inner-main-body">
         <div class="row">
             <div class="col-xl-6 md-4">
-                <div class="card mb-2">
+                {items.map(item =>(
+                    <div class="card mb-2">
                     <div class="card-body p-2 p-sm-3">   
                         <div class="media forum-item">
                             <a href="#" data-toggle="collapse" data-target=".forum-content"></a>
+                            <div class="media-body" key={item.id}>
+                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{item.name}</a></h6>
+                                <p class="text-body">{item.question}</p>
 
-                            <div class="media-body">
-                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Realtime fetching data</a></h6>
-                                    <p class="text-body">
-                                        lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
-                                    </p>
                                 <p class="text-muted"><a href="javascript:void(0)">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
-                            </div>
+                            </div>   
+                    </div>
+                    </div>
+                    </div>
+
+                ))}
                         </div>
                     </div>  
                 </div>
-            </div>
-        </div>
-        </div>
 
         < div class="modal">
             <Modal size="lg" show={show} onHide={handleClose}>
@@ -76,16 +90,16 @@ function Forum() {
                         <form>
                             <div class="form-group">
                                 <label for="threadTitle">Title</label>
-                                <input type="text" class="form-control" id="threadTitle" placeholder="Enter title" autofocus="" />
+                                <input type="text" id="forum_post_title" required="required" class="form-control" placeholder="Enter title" autofocus="" />
                             </div>
                             <div class="form-group">
                                 <label for="threadTitle">Name</label>
-                                <input type="text" class="form-control" id="threadTitle" placeholder="Enter name" autofocus="" />
+                                <input type="text" id="forum_post_name" required="required" class="form-control" placeholder="Enter name" autofocus="" />
                             </div>
                         
                             <div class="form-group">
                                 <label for="threadTitle">Question</label>
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Question?"></input>
+                                <input type="text" id="forum_post_body" required="required" class="form-control bg-light border-0 small" placeholder="Question?"></input>
                             </div>
                         </form>
                     </Modal.Body>
@@ -94,7 +108,7 @@ function Forum() {
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={handleClose}>
+                        <Button variant="primary" id="forum_post_submit" onClick={handleClose}>
                             Post
                         </Button>
                     </Modal.Footer>
