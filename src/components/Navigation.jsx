@@ -4,26 +4,23 @@ import {Link, withRouter} from "react-router-dom";
 function Navigation(props){
     return(
         <div id="wrapper">
-            <div id="content-wrapper" class="">
-                <div id="content">
-                <div class="row align-items-center ">
-                    <nav class="navbar navbar-light bg-white topbar">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand navbar-light topbar shadow">
 
-                         <form class="d-none d-sm-inline-block form-inline navbar-search">
-                            <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2"></input>
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button">
-                                    </button>
-                                </div>
-                            </div>
-                        </form>                               
-                     </nav>
+                <form class="d-sm-inline-block form-inline navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            aria-label="Search" aria-describedby="basic-addon2"></input>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                            </button>
+                        </div>
+
                     </div>
-                </div>
-            </div>
-        </div>
+                </form>                            
+            </nav>
+    </div>
+    </div>
     );
 }
 

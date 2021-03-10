@@ -53,7 +53,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #858796;
+    color: #4b4b4b;
     text-align: left;
     background-color: #fff;
   }
@@ -100,6 +100,7 @@
   dl {
     margin-top: 0;
     margin-bottom: 1rem;
+    padding-inline-start: 0px;
   }
   
   ol ol,
@@ -547,7 +548,8 @@
   
   .row {
     display: flex;
-    margin-right: -0.75rem;
+    flex-wrap: wrap;
+    margin-right: 2rem;
     margin-left: -0.75rem;
   }
   
@@ -571,10 +573,12 @@
     position: relative;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem
   }
   
   .col {
-    flex-basis: 0;
+    flex-basis: 100px;
     max-width: 100%;
   }
   
@@ -1309,10 +1313,6 @@
     .col-xl-5 {
       flex: 0 0 41.66667%;
       max-width: 41.66667%;
-    }
-    .col-xl-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
     }
     .col-xl-9 {
       flex: 0 0 75%;
@@ -2288,22 +2288,22 @@
   
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4;
+    background-color: #0D4077;
+    border-color: #0D4077;
     box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
   }
   
   .btn-primary.disabled, .btn-primary:disabled {
     color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df;
+    background-color: #0D4077;
+    border-color: #0D4077;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #2653d4;
-    border-color: #244ec9;
+    background-color: #0D4077;
+    border-color: #0D4077;
   }
   
   .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -4008,11 +4008,11 @@
   }
   
   .navbar {
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1px;
+    position:relative;
+    padding: .5rem 1rem;
   }
   
   .navbar .container,
@@ -4029,7 +4029,6 @@
     padding-bottom: 0.3125rem;
     margin-right: 1rem;
     font-size: 1.25rem;
-    white-space: nowrap;
   }
   
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4039,9 +4038,10 @@
   .navbar-nav {
     display: flex;
     flex-direction: column;
-    padding-left: 0;
+    padding-left: 0px;
     margin-bottom: 0;
     list-style: none;
+    padding-inline-start: 0px;
   }
   
   .navbar-nav .nav-link {
@@ -4244,6 +4244,7 @@
   
   .navbar-light .navbar-brand {
     color: rgba(255, 254, 254, 0.9);
+    width: 100%;
   }
   
   .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -4350,7 +4351,7 @@
   
   
   .card-body {
-    padding: 1px;
+    padding: 2px;
     display: flex;
   }
   
@@ -5397,7 +5398,7 @@
   }
   
   .modal-open {
-    overflow: visible;
+    overflow: auto;
   }
   
   .modal-open .modal {
@@ -5414,6 +5415,7 @@
     height: 100%;
     overflow: hidden;
     outline: 0;
+    background: rgba(112, 112, 112, 0.767); 
   }
   
   .modal-dialog {
@@ -5490,26 +5492,30 @@
   }
   
   .modal-content {
-    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(63, 63, 63, 0.2);
     border-radius: 0.3rem;
     outline: 0;
+    z-index: 1100 !important;
+    margin: 2px auto;
+    position: absolute;
+    top: 30px;
   }
   
   .modal-backdrop {
     position: fixed;
+    display: none;
     top: 0;
     left: 0;
-    z-index: 1040;
+    z-index: 1040  !important;
     width: 100vw;
     height: 100vh;
-    background-color: #000;
+    background-color: rgba(121, 120, 120, 0.445);
   }
   
   .modal-backdrop.fade {
@@ -7320,6 +7326,7 @@
   
   .shadow {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    
   }
   
   .shadow-lg {
@@ -7434,7 +7441,7 @@
   
   .mb-1,
   .my-1 {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: .9rem !important;
   }
   
   .ml-1,
@@ -7453,7 +7460,7 @@
   
   .mr-2,
   .mx-2 {
-    margin-right: 0.5rem !important;
+    margin-right: 1rem !important;
   }
   
   
@@ -9345,7 +9352,7 @@
   }
   
   .text-secondary {
-    color: #858796 !important;
+    color: #B5233A !important;
   }
   
   a.text-secondary:hover, a.text-secondary:focus {
@@ -9555,8 +9562,7 @@
   .container-md,
   .container-lg,
   .container-xl {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-right: 0rem;
   }
   
   .scroll-to-top {
@@ -9727,7 +9733,7 @@
   }
   
   .text-xs {
-    font-size: .7rem;
+    font-size: .9rem;
   }
   
   .text-lg {
@@ -9780,19 +9786,19 @@
   }
   
   .border-left-primary {
-    border-left: 0.25rem solid #4e73df !important;
+    border-left: 0.25rem solid #0D4077 !important;
   }
   
   .border-bottom-primary {
-    border-bottom: 0.25rem solid #4e73df !important;
+    border-bottom: 0.25rem solid #0D4077 !important;
   }
   
   .border-left-secondary {
-    border-left: 0.25rem solid #858796 !important;
+    border-left: 0.25rem solid #B5233A !important;
   }
   
   .border-bottom-secondary {
-    border-bottom: 0.25rem solid #858796 !important;
+    border-bottom: 0.25rem solid #B5233A !important;
   }
   
   .border-left-success {
@@ -9908,6 +9914,7 @@
   
   .topbar {
     height: 4.375rem;
+    width: 100%;
   }
   
   .topbar #sidebarToggleTop {
