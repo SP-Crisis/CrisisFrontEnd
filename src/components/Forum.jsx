@@ -2,27 +2,22 @@ import React, {useEffect, useState} from "react";
 import { Button, Modal } from 'react-bootstrap';
 
 
-
 function Forum() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
-
-    const [items, setItems] = useState([]);
-    //useEffect 
-    useEffect(() => {
-        fetch("https://crisis-octogon-3123.herokuapp.com/api/questions",{
-            method:'GET'
-        })
-          .then(res => res.json())
-          .then(
-            (result) => {
-              setItems(result);
-            },
-          )
-      }, [])
+    const [data, setData] = useState(null);
     
+    const getData = () =>
+        fetch("https://crisis-octogon-3123.herokuapp.com/api/questions")
+        .then((res) => res.json())
+        .then(data => console.log(data));
+
+    useEffect(()=> {
+        getData().then((data) => setData(data))
+    }, [])
+
 
   return (
     <div id="wrapper">
@@ -60,22 +55,28 @@ function Forum() {
         <div class="inner-main-body">
         <div class="row">
             <div class="col-xl-6 md-4">
-                {items.map(item =>(
+                
                     <div class="card mb-2">
                     <div class="card-body p-2 p-sm-3">   
                         <div class="media forum-item">
                             <a href="#" data-toggle="collapse" data-target=".forum-content"></a>
-                            <div class="media-body" key={item.id}>
-                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">{item.name}</a></h6>
-                                <p class="text-body">{item.question}</p>
-
+                            <div class="media-body">
+                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Test Test</a></h6>
+                                <p class="text-body"></p>
+                                    Test Test Test Test
                                 <p class="text-muted"><a href="javascript:void(0)">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
                             </div>   
                     </div>
                     </div>
                     </div>
 
-                ))}
+                    {data?.map((item) =>
+                    <ul>
+                        <li>{item.questions}</li>
+                    </ul>
+                    
+                    )}
+
                         </div>
                     </div>  
                 </div>
@@ -119,7 +120,9 @@ function Forum() {
         </div>
     </div>
     </div>
+
   );
+
 }
 
 export default Forum;
