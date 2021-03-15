@@ -26,7 +26,7 @@ function Forum() {
         <div class="inner-main">
         
         <div class="align-items-center justify-content-between mb-4">
-                <Button variant="primary"  onClick={handleShow} lass="btn btn-primary has-icon btn-block">
+                <Button variant="primary"  onClick={handleShow} class="btn btn-primary has-icon btn-block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus mr-2">
                           <line x1="12" y1="5" x2="12" y2="19"></line>
                           <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -59,12 +59,14 @@ function Forum() {
                     <div class="card mb-2">
                     <div class="card-body p-2 p-sm-3">   
                         <div class="media forum-item">
-                            <a href="#" data-toggle="collapse" data-target=".forum-content"></a>
+                            <a href="#" data-target=".forum-content"></a>
                             <div class="media-body">
-                                <h6><a href="#" data-toggle="collapse" data-target=".forum-content" class="text-body">Test Test</a></h6>
-                                <p class="text-body"></p>
-                                    Test Test Test Test
-                                <p class="text-muted"><a href="javascript:void(0)">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
+                                <h6><a href="#"data-target=".forum-content" class="text-body">Test Test</a></h6>
+                                <p class="text-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                </p>
+                                <p class="text-muted"><a class="text">drewdan</a> replied <span class="text-secondary font-weight-bold">13 minutes ago</span></p>
                             </div>   
                     </div>
                     </div>
