@@ -32,9 +32,13 @@ function Sidebar(props){
                                     Policies
                                 </Link>
                         </li>
-                        <li class="nav-item">
-                             <a class="nav-link" href="charts.html">
-                                <span>Operations</span></a>
+                        <li class={`nav-item  ${
+                                    props.location.pathname === "/operations" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/operations">
+                                    Operations
+                                </Link>
                         </li>
                          <li class={`nav-item  ${
                                     props.location.pathname === "/forum" ? "active" : ""
