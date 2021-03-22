@@ -1,8 +1,8 @@
 import React from "react";
 import Forum from "./Forum.png";
-import Cafetime from "./CafeTime.png";
-import Librarytime from "./LibraryTime.png";
-import RecCentertime from "./RecCenterTime.png";
+import Cafetime from "./Dinning.png";
+import Librarytime from "./Library.png";
+import RecCentertime from "./RecCenter.png";
 import {Link} from "react-router-dom"
 import { Button} from 'react-bootstrap';
 
@@ -27,14 +27,14 @@ function Operations(){
                         <h6 class="m-0 font-weight-bold text-primary">Dinning </h6>
                      </div>
                 <div class="card-body">
-                <img src={Cafetime} width="200px" height="235px"></img>
+                <img src={Cafetime} width="265px" height="283px" ></img>
                 
                 </div>
-
-                <Button variant="primary"  href="https://columbusstate.campusdish.com" target="_blank" class="btn btn-primary has-icon btn-block">
+                </div>
+                <p></p>
+                <Button variant="primary"  href="https://columbusstate.campusdish.com" target="_blank" class="btn btn-primary btn-block">
                     More Information
                 </Button>
-                </div>
 
              </div>
 
@@ -45,13 +45,14 @@ function Operations(){
                         <h6 class="m-0 font-weight-bold text-primary">Library </h6>
                      </div>
                 <div class="card-body">
-                <img src={Librarytime} width="200px" height="235px"></img>
+                <img src={Librarytime}  width="265px" height="283px"></img>
                 
                 </div>
+                </div>
+                <p></p>
                 <Button variant="primary"  href="https://library.columbusstate.edu" target="_blank" class="btn btn-primary has-icon btn-block">
                     More Information
                 </Button>
-                </div>
 
              </div>
 
@@ -62,13 +63,15 @@ function Operations(){
                         <h6 class="m-0 font-weight-bold text-primary">Rec Center </h6>
                      </div>
                 <div class="card-body">
-                <img src={RecCentertime} width="200px" height="235px"></img>
+                <img src={RecCentertime} width="265px" height="283px"></img>
                 
                 </div>
+                
+                </div>
+                <p></p>
                 <Button variant="primary"  href="https://campusrec.columbusstate.edu" target="_blank" class="btn btn-primary has-icon btn-block" >
                     More Information
                 </Button>
-                </div>
 
              </div>
 
