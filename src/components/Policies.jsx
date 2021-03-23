@@ -1,7 +1,7 @@
 import React from "react";
-import Mask from "./Mask.png";
-import Feet from "./Feet.png";
-import Forum from "./Forum.png";
+import Mask from "./Images/Mask.png";
+import Feet from "./Images/Feet.png";
+import Forum from "./Images/Forum.png";
 import {Link, withRouter} from "react-router-dom"
 
 function Policies() {

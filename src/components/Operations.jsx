@@ -1,8 +1,8 @@
 import React from "react";
-import Forum from "./Forum.png";
-import Cafetime from "./Dinning.png";
-import Librarytime from "./Library.png";
-import RecCentertime from "./RecCenter.png";
+import Forum from "./Images/Forum.png";
+import Cafetime from "./Images/Dinning.png";
+import Librarytime from "./Images/Library.png";
+import RecCentertime from "./Images/RecCenter.png";
 import {Link} from "react-router-dom"
 import { Button} from 'react-bootstrap';
 
