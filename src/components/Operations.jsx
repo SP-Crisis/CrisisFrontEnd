@@ -32,7 +32,7 @@ function Operations(){
                 </div>
                 </div>
                 <p></p>
-                <Button variant="primary"  href="https://columbusstate.campusdish.com" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://columbusstate.campusdish.com" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     More Information
                 </Button>
 
@@ -50,7 +50,7 @@ function Operations(){
                 </div>
                 </div>
                 <p></p>
-                <Button variant="primary"  href="https://library.columbusstate.edu" target="_blank" class="btn btn-primary has-icon btn-block">
+                <Button variant="primary"  href="https://library.columbusstate.edu" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     More Information
                 </Button>
 
@@ -69,7 +69,7 @@ function Operations(){
                 
                 </div>
                 <p></p>
-                <Button variant="primary"  href="https://campusrec.columbusstate.edu" target="_blank" class="btn btn-primary has-icon btn-block" >
+                <Button variant="primary"  href="https://campusrec.columbusstate.edu" target="_blank" class="btn btn-primary btn-block align-items-center" >
                     More Information
                 </Button>
 

@@ -31,7 +31,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/tech-support/" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/tech-support/" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
@@ -45,7 +45,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/procurement/" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/procurement/" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
@@ -59,7 +59,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/for-students/connecting-to-the-wifi/" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/for-students/connecting-to-the-wifi/" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
@@ -76,7 +76,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/information-security/" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/information-security/" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
@@ -90,7 +90,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/services/enterprisesoftware.php" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/services/enterprisesoftware.php" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
@@ -104,7 +104,7 @@ function Tech(){
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/services/web-services.php" target="_blank" class="btn btn-primary btn-block">
+                <Button variant="primary"  href="https://uits.columbusstate.edu/services/web-services.php" target="_blank" class="btn btn-primary  btn-block align-items-center">
                     Learn More
                 </Button>
 
