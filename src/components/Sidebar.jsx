@@ -48,9 +48,13 @@ function Sidebar(props){
                                     Forum
                                 </Link>
                         </li>
-                        <li class="nav-item">
-                             <a class="nav-link" href="charts.html">
-                                <span>Technologies</span></a>
+                        <li class={`nav-item  ${
+                                    props.location.pathname === "/tech" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/tech">
+                                    Technologies
+                                </Link>
                         </li>
                         <li class="nav-item">
                              <a class="nav-link" href="charts.html">

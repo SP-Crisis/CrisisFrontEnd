@@ -1,5 +1,5 @@
 import React from "react";
-import Forum from "./Forum.png";
+import Forum from "./Images/Forum.png";
 import {Link, withRouter} from "react-router-dom";
 
 function Home() {
