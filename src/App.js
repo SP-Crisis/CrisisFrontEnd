@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Sidebar, Policies, Forum, Operations, Tech } from "./components";
+import { Navigation, Home, Sidebar, Policies, Forum, Operations, Tech, Profile} from "./components";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
               <Route path="/forum" exact component={() => <Forum />} />
               <Route path="/operations" exact component={() => <Operations />} />
               <Route path="/tech" exact component={() => <Tech />} />
+              <Route path="/profile" exact component={() => <Profile />} />
             </Switch>
           </div>
         </Router>
