@@ -9,7 +9,7 @@ function Profile(){
             <div class="d-sm-flex justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Profile</h1>
             <a href="#" class="">
-            <Link to="/forum">
+                    <Link to="/forum">
                       <img src={Forum} width="300px" height="235px"></img>
                     </Link>
             </a>

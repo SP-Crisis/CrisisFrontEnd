@@ -64,6 +64,14 @@ function Sidebar(props){
                                     Profile
                                 </Link>
                         </li>
+                        <li class={`nav-item  ${
+                                    props.location.pathname === "/login" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/login">
+                                    Login
+                                </Link>
+                        </li>
 
                     </ul>
         </div>
