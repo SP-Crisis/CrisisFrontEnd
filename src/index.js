@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./forum.css";
 import "./index.css";
+import "./login.css";
 import "./dashboard.css";
 import App from "./App";
 
