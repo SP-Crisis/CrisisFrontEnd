@@ -4,26 +4,27 @@ import {Link, withRouter} from "react-router-dom";
 
 function Login(){
     return(
-        <div class="wrapper">
-        <div class="container">
+        <div id="wrapper">
+            <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-xl-8 col-lg-7 ">
                     <div class="card">
-                        <form class="box">
+                       <form class="box">
                         <h1>Login</h1>
                             <p class="text-muted"> Please enter your login and password!</p> 
-                                <input type="text" name="" placeholder="Username"> </input>
-                                <input type="password" name="" placeholder="Password"> </input>
+                            <div class="input-group">
+                                <input type="text" class="form-control bg-light " placeholder="Email"></input>
+                                <input type="text" class="form-control bg-light" placeholder="Password"></input>
+                            </div>
                                      <a class="forgot text-muted" href="#">Forgot password?</a> 
-
-                                <Button type="submit" name="" value="Login">
-                                <Link to="/dashboard"></Link>
-                                </Button>   
-                        </form>
+                                     <Link to="/">
+                                        <Button variant="primary" class="btn btn-primary">Login</Button> 
+                                     </Link>
+                        </form> 
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     );
 

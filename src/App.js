@@ -1,16 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Home, Sidebar, Policies, Forum, Operations, Tech, Profile, Login} from "./components";
+import { Home, Sidebar, Policies, Forum, Operations, Tech, Profile, Login} from "./components";
 
 function App() {
   return (
     <div className="App">
       <div class ="grid-container">
       <Router>
-      
-          <div class="item1">
-            <Navigation />
-          </div>
           <div class="item2">
           <Sidebar />
           </div>
