@@ -14,9 +14,8 @@ function Login(){
                             <p class="text-muted"> Please enter your login and password!</p> 
                             <div class="input-group">
                                 <input type="text" class="form-control bg-light " placeholder="Email"></input>
-                                <input type="text" class="form-control bg-light" placeholder="Password"></input>
+                                <input type="password" class="form-control bg-light" placeholder="Password"></input>
                             </div>
-                                     <a class="forgot text-muted" href="#">Forgot password?</a> 
                                      <Link to="/">
                                         <Button variant="primary" class="btn btn-primary">Login</Button> 
                                      </Link>
