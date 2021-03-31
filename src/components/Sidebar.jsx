@@ -56,9 +56,21 @@ function Sidebar(props){
                                     Technologies
                                 </Link>
                         </li>
-                        <li class="nav-item">
-                             <a class="nav-link" href="charts.html">
-                                <span>Profile</span></a>
+                        <li class={`nav-item  ${
+                                    props.location.pathname === "/profile" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/profile">
+                                    Profile
+                                </Link>
+                        </li>
+                        <li class={`nav-item  ${
+                                    props.location.pathname === "/login" ? "active" : ""
+                                    }`}
+                                >
+                                <Link class="nav-link" to="/login">
+                                    Login
+                                </Link>
                         </li>
 
                     </ul>

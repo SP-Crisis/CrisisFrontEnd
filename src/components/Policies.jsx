@@ -92,7 +92,7 @@ function Policies() {
                 <h6 class="m-0 font-weight-bold text-primary">Vaccine Info</h6>
           </div>
           <div class="card-body">
-              <iframe src="https://experience.arcgis.com/experience/3d8eea39f5c1443db1743a4cb8948a9c/" width="450px" height="620px"></iframe>
+              <iframe src="https://www.cdc.gov/vaccines/covid-19/hcp/mrna-vaccine-basics.html" width="450px" height="620px"></iframe>
           </div>
          </div>
       </div>
