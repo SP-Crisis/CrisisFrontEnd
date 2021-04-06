@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Button, Modal } from 'react-bootstrap';
+import styles from '../forum.css'
 
 
 function Forum() {
@@ -8,6 +9,14 @@ function Forum() {
     const handleShow = () => setShow(true);
 
     const [data, setData] = useState([]);
+
+function testClicked(){
+        alert("test successful")
+      }
+
+function questionClicked(){
+        alert("test")
+        }
 
 
 
@@ -60,9 +69,13 @@ function Forum() {
         <div class="inner-main-body">
         <div class="row">
             <div class="col-xl-6 md-4">
+
               <ul>
               {data.map((item)=>{
-                  return <li key ={item.id}>{item.question}</li>
+
+
+                  return <li onClick={testClicked} class="q" key ={item.id}>{item.question}</li>
+
               })}
               </ul>
 
