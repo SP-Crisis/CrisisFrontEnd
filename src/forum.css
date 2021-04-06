@@ -2,7 +2,7 @@ body{
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;    
+    background-color: #e2e8f0;
     overflow-x: scroll;
     overflow-y: scroll;
 }
@@ -114,4 +114,14 @@ body{
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1rem;
+}
+.q
+{
+  list-style-type: none;
+  position: relative;
+  font-size: 2rem;
+  padding: 30px;
+  margin-bottom: 30px;
+  color: #4a5568;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
