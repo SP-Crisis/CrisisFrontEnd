@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home, Sidebar, Policies, Forum, Operations, Tech, Profile, Login, ProtectedRoute} from "./components";
+import { Home, Sidebar, Policies, Forum, Operations, Tech, Login, ProtectedRoute} from "./components";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
               <ProtectedRoute path="/forum" exact component={() => <Forum />} />
               <ProtectedRoute path="/operations" exact component={() => <Operations />} />
               <ProtectedRoute path="/tech" exact component={() => <Tech />} />
-              <ProtectedRoute path="/profile" exact component={() => <Profile />} />
+              {/* <ProtectedRoute path="/profile" exact component={() => <Profile />} /> */}
             </Switch>
           </div>
         </Router>

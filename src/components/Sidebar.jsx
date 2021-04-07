@@ -56,14 +56,14 @@ function Sidebar(props){
                                     Technologies
                                 </Link>
                         </li>
-                        <li class={`nav-item  ${
+                        {/* <li class={`nav-item  ${
                                     props.location.pathname === "/profile" ? "active" : ""
                                     }`}
                                 >
                                 <Link class="nav-link" to="/profile">
                                     Profile
                                 </Link>
-                        </li>
+                        </li> */}
                         <li class={`nav-item  ${
                                     props.location.pathname === "/login" ? "active" : ""
                                     }`}
