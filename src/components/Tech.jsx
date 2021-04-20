@@ -23,45 +23,41 @@ function Tech(){
              </div>
 
              <div class="row">
+             <h1 class="h3 mb-0 text-gray-800">To learn more click images below:</h1>
+             </div>
+
+             <div class="row">
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={TechSup} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/tech-support/" target="_blank" class="align-items-center">
+                            <img src={TechSup} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
                 <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/tech-support/" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={Payment} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/procurement/" target="_blank" class="align-items-center">
+                            <img src={Payment} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
-                <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/procurement/" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={Network} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/for-students/connecting-to-the-wifi/" target="_blank" class="align-items-center">
+                            <img src={Network} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
-                <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/for-students/connecting-to-the-wifi/" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
@@ -71,42 +67,33 @@ function Tech(){
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={Security} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/information-security/" target="_blank" class="align-items-center">
+                            <img src={Security} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
-                <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/information-security/" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={Software} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/services/enterprisesoftware.php" target="_blank" class="align-items-center">
+                            <img src={Software} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
-                <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/services/enterprisesoftware.php" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
                 <div class="col-xl-8 col-lg-7">
                     <div class="card">
                     <div class="card-body">
-                        <img src={WebServices} width="283px" height="283px" ></img>
-                
+                        <Button variant="primary"  href="https://uits.columbusstate.edu/services/web-services.php" target="_blank" class="align-items-center">
+                            <img src={WebServices} width="283px" height="283px" ></img>
+                        </Button>
                     </div>
                         </div>
-                <p></p>
-                <Button variant="primary"  href="https://uits.columbusstate.edu/services/web-services.php" target="_blank" class="btn btn-primary  btn-block align-items-center">
-                    Learn More
-                </Button>
 
                 </div>
 
