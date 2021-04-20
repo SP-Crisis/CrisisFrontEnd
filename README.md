@@ -1,10 +1,10 @@
 # This is the Crisis Management Front End repository 
 
 ## System is deployed via Heroku 
-[Crisis Management System](https://crisismanagmentsystem.herokuapp.com).
+[Crisis Management System](https://crisismanagmentsystem.herokuapp.com)
 
 ## All back end functions in seperate repository 
-[Crisis Management System - BackEnd Repository](https://github.com/SP-Crisis/CrisisBackend).
+[Crisis Management System - BackEnd Repository](https://github.com/SP-Crisis/CrisisBackend)
 
 ## Forum
 
