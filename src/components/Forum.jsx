@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { Button, Modal } from 'react-bootstrap';
-import styles from '../forum.css'
+import styles from '../forum.css';
+import CreateQuestion from './CreateQuestion'
+import CreateAnswer from './CreateAnswer'
 
 
 function Forum() {
@@ -8,29 +10,48 @@ function Forum() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
+
     const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
 
-function testClicked(){
-        alert("test successful")
-      }
+    const [questionId, setQuestionId] = useState(-1);
 
-function questionClicked(){
-        alert("test")
-        }
+    let filteredAnswers = [];
 
 
+function filterAnswers(){
+  filteredAnswers = data2.filter(item => {
+    return item.question == questionId;
+  })
 
-    //const getData = () =>
-      //  fetch("https://crisis-octogon-3123.herokuapp.com/api/questions")
-        //.then((res) => res.json())
-        //.then(data => console.log(data));
+
+  return filteredAnswers
+}
+
+
+
 
     useEffect(()=> {
       fetch("https://crisis-octogon-3123.herokuapp.com/api/questions")
       .then((response) => response.json())
       .then(data => setData(data));
-      //getData().then((data) => setData(data))
     }, [])
+
+    useEffect(()=> {
+      fetch("https://crisis-octogon-3123.herokuapp.com/api/answers")
+      .then((response) => response.json())
+      .then(data2 => setData2(data2));
+    }, [])
+
+    useEffect(() => {
+      filterAnswers();
+
+
+    }, [questionId,setQuestionId])
+
 
 
   return (
@@ -74,7 +95,8 @@ function questionClicked(){
               {data.map((item)=>{
 
 
-                  return <li onClick={testClicked} class="q" key ={item.id}>{item.question}</li>
+                  return <li onClick={() => {setQuestionId(item.id); handleShow2();}} class="q" key ={item.id}>{item.question}</li>
+
 
               })}
               </ul>
@@ -90,29 +112,46 @@ function questionClicked(){
                     </Modal.Header>
 
                     <Modal.Body>
-                        <form>
-                            <div class="form-group">
-                                <label for="threadTitle">Title</label>
-                                <input type="text" id="forum_post_title" required="required" class="form-control" placeholder="Enter title" autofocus="" />
-                            </div>
-                            <div class="form-group">
-                                <label for="threadTitle">Name</label>
-                                <input type="text" id="forum_post_name" required="required" class="form-control" placeholder="Enter name" autofocus="" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="threadTitle">Question</label>
-                                <input type="text" id="forum_post_body" required="required" class="form-control bg-light border-0 small" placeholder="Question?"></input>
-                            </div>
-                        </form>
+                      <CreateQuestion />
                     </Modal.Body>
 
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
-                        <Button variant="primary" id="forum_post_submit" onClick={handleClose}>
-                            Post
+                    </Modal.Footer>
+                </Modal>
+        </ div>
+
+        < div class="modal">
+            <Modal size="lg" show={show2} onHide={handleClose2}>
+                    <Modal.Header closeButton>
+                        <Modal.Title> Answers </Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                    <div>
+                        <ul>
+                       {filterAnswers().map((item)=>{
+
+
+                            return <li class="q" key ={item.id}>{item.answer}</li>
+
+                        })}
+                        </ul>
+                      </div>
+                        <br></br>
+
+                    <div>
+                        <h1>Answer a Question</h1>
+
+                    <CreateAnswer />
+                    </div>
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose2}>
+                            Close
                         </Button>
                     </Modal.Footer>
                 </Modal>
