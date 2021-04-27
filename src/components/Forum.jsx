@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { Button, Modal } from 'react-bootstrap';
+import axios from 'axios';
 import styles from '../forum.css';
 import CreateQuestion from './CreateQuestion'
 import CreateAnswer from './CreateAnswer'
@@ -18,8 +19,10 @@ function Forum() {
     const [data2, setData2] = useState([]);
 
     const [questionId, setQuestionId] = useState(-1);
+    const [questionRank, setQuestionRank] = useState(-1);
 
     let filteredAnswers = [];
+    let filteredQuestions = [];
 
 
 function filterAnswers(){
@@ -31,6 +34,14 @@ function filterAnswers(){
   return filteredAnswers
 }
 
+function filterQuestions(){
+  filteredQuestions = data.filter(item => {
+    return item.rank == questionRank;
+  })
+
+
+  return filteredQuestions
+}
 
 
 
@@ -51,6 +62,13 @@ function filterAnswers(){
 
 
     }, [questionId,setQuestionId])
+
+    useEffect(() => {
+      filterQuestions();
+
+
+    }, [questionRank,setQuestionRank])
+
 
 
 
@@ -85,6 +103,7 @@ function filterAnswers(){
                 </span>
             </div>
         </div>
+
         </div>
 
         <div class="inner-main-body">
@@ -95,7 +114,7 @@ function filterAnswers(){
               {data.map((item)=>{
 
 
-                  return <li onClick={() => {setQuestionId(item.id); handleShow2();}} class="q" key ={item.id}>{item.question}</li>
+                  return <li onClick={() => {setQuestionId(item.id); handleShow2(); setQuestionRank(item.rank);}} class="q" key ={item.id}>{item.question}</li>
 
 
               })}
@@ -126,10 +145,26 @@ function filterAnswers(){
         < div class="modal">
             <Modal size="lg" show={show2} onHide={handleClose2}>
                     <Modal.Header closeButton>
-                        <Modal.Title> Answers </Modal.Title>
+                        <Modal.Title> Question Info </Modal.Title>
                     </Modal.Header>
 
                     <Modal.Body>
+
+                    <h1>Question Rank</h1>
+
+                    <div>
+                        <ul>
+                       {filterQuestions().map((item)=>{
+
+
+                            return <li class="q" key ={item.id}>{item.rank}</li>
+
+                        })}
+                        </ul>
+                      </div>
+
+                    <h1>Answers</h1>
+
                     <div>
                         <ul>
                        {filterAnswers().map((item)=>{
