@@ -8,7 +8,7 @@
 
 ## Forum
 
-The Forum is being pulled from the back end to the front via and api. For more information virew the backend repoistory.
+The Forum is being pulled from the back end to the front via an api. For more information view the backend repoistory.
 
 
 # Getting Started with Create React App
